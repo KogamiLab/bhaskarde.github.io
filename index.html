@@ -9,31 +9,37 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Bhaskar De</div>
+            <div class="nav-logo">
+                <a href="index.html">Bhaskar De</a>
+            </div>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#research">Research</a>
-                <a href="#publications">Publications</a>
-                <a href="#presentations">Presentations</a>
-                <a href="#cv">CV</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="presentations.html">Presentations</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="cv.html">CV</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="hero">
+    <main class="main-content">
+        <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1>Bhaskar De</h1>
                         <h2>PhD Student in Physics</h2>
-                        <p class="lead">I am a Ph.D. student at the <strong>ULCOS Lab</strong>, Department of Physics, <strong>IISER Bhopal</strong>, specializing in Ultrafast Spectroscopy, with a focus on Two-Dimensional Coherent Spectroscopy.</p>
-                        <p>My research aims to unravel the complex interactions within nanomaterials using advanced spectroscopic techniques and computational modeling.</p>
+                        <div class="intro-text">
+                            <p>I am a Ph.D. student at the <strong>ULCOS Lab</strong>, Department of Physics, <strong>IISER Bhopal</strong>, specializing in Ultrafast Spectroscopy, with a focus on Two-Dimensional Coherent Spectroscopy.</p>
+                            
+                            <p>My research aims to unravel the complex interactions within nanomaterials using advanced spectroscopic techniques and computational modeling.</p>
+                        </div>
                         
-                        <div class="hero-buttons">
-                            <a href="#research" class="btn btn-primary">Explore Research</a>
-                            <a href="assets/CV_Bhaskar_De.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
+                        <div class="quick-links">
+                            <a href="research.html" class="btn btn-primary">Explore Research</a>
+                            <a href="assets/files/CV_Bhaskar_De.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -43,102 +49,21 @@
             </div>
         </section>
 
-        <section id="research" class="research-section">
+        <section class="highlights-section">
             <div class="container">
-                <h2>Research Interests</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <div class="card-icon">🔬</div>
-                        <h3>Two-Dimensional Coherent Spectroscopy</h3>
-                        <p>Developing advanced techniques for investigating excitonic dynamics and quantum coherence in nanomaterials.</p>
+                <h2>Research Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <h3>Current Focus</h3>
+                        <p>Two-dimensional coherent spectroscopy and exciton dynamics in nanomaterials</p>
                     </div>
-                    <div class="research-card">
-                        <div class="card-icon">⚡</div>
-                        <h3>Ultrafast Pulse Shaping</h3>
-                        <p>Probing material properties using temporally and spatially structured ultrafast pulses with SLM/gratings.</p>
+                    <div class="highlight-card">
+                        <h3>Recent Publications</h3>
+                        <p>Published in <em>Optics Letters</em>, <em>Journal of Chemical Physics</em>, and <em>Physical Review B</em></p>
                     </div>
-                    <div class="research-card">
-                        <div class="card-icon">🧠</div>
-                        <h3>Machine Learning in Spectroscopy</h3>
-                        <p>Neural network development for lineshape analysis and non-exponential decay dynamics.</p>
-                    </div>
-                    <div class="research-card">
-                        <div class="card-icon">🌐</div>
-                        <h3>Orbital Angular Momentum Modes</h3>
-                        <p>Integration of OAM modes in multidimensional spectroscopy experiments for novel light–matter interactions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="publications-section">
-            <div class="container">
-                <h2>Recent Publications</h2>
-                <div class="publications-list">
-                    <div class="publication-item">
-                        <h3>Quantitative Lineshape Analysis for Arbitrary Inhomogeneity in Two-Dimensional Coherent Spectroscopy</h3>
-                        <p class="authors">Bhaskar De, Pradeep Kumar, Krishna. K. Maurya, Rishabh Tripathi, and Rohan Singh</p>
-                        <p class="journal"><em>Optics Letters</em>, 50, 4502 (2025)</p>
-                    </div>
-                    <div class="publication-item">
-                        <h3>Coherent nonlinear optical response for high-intensity excitation</h3>
-                        <p class="authors">Rishabh Tripathi, Krishna. K. Maurya, Pradeep Kumar, Bhaskar De, and Rohan Singh</p>
-                        <p class="journal"><em>The Journal of Chemical Physics</em>, 162, 114111 (2025)</p>
-                    </div>
-                    <div class="publication-item">
-                        <h3>Exciton–exciton interactions: A quantitative comparison between complementary phenomenological models</h3>
-                        <p class="authors">Pradeep Kumar†, Bhaskar De†, Rishabh Tripathi, and Rohan Singh</p>
-                        <p class="journal"><em>Physical Review B</em>, 109, 155423 (2024) <span class="note">(†Equal contribution)</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="presentations" class="presentations-section">
-            <div class="container">
-                <h2>Selected Conference Presentations</h2>
-                <div class="presentations-grid">
-                    <div class="presentation-card oral">
-                        <h4>Oral Presentations</h4>
-                        <div class="presentation-item">
-                            <h5>APS Global Physics Summit, Anaheim, USA, 2025</h5>
-                            <p>"Simulating Two-Dimensional Coherent Spectroscopy with Arbitrary Inhomogeneity Beyond Gaussian Distributions"</p>
-                            <span class="presentation-type">Contributed Talk</span>
-                        </div>
-                    </div>
-                    <div class="presentation-card poster">
-                        <h4>Poster Presentations</h4>
-                        <div class="presentation-item">
-                            <h5>CLEO, Long Beach, USA, 2025</h5>
-                            <p>"Two-Dimensional Coherent Spectroscopy with Arbitrary Inhomogeneous Broadening"</p>
-                        </div>
-                        <div class="presentation-item">
-                            <h5>CLEO Pacific Rim, Incheon, South Korea, 2024</h5>
-                            <p>"Two-Dimensional Coherent Spectroscopy Simulations with Arbitrary Inhomogeneous Distribution"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact & Links</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-                        <p><strong>Email:</strong> <a href="mailto:bhaskar7de@gmail.com">bhaskar7de@gmail.com</a></p>
-                        <p><strong>IISER Email:</strong> <a href="mailto:bhaskar20@iiserb.ac.in">bhaskar20@iiserb.ac.in</a></p>
-                        <p><strong>Phone:</strong> +91 7003073490</p>
-                    </div>
-                    <div class="links-info">
-                        <h3>Professional Links</h3>
-                        <div class="social-links">
-                            <a href="#" target="_blank">Google Scholar</a>
-                            <a href="#" target="_blank">ORCID</a>
-                            <a href="#" target="_blank">LinkedIn</a>
-                            <a href="assets/CV_Bhaskar_De.pdf" target="_blank">Download CV</a>
-                        </div>
+                    <div class="highlight-card">
+                        <h3>Awards</h3>
+                        <p>Prime Minister's Research Fellowship (PMRF) recipient and APS-DLS Travel Award winner</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +72,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Bhaskar De. All rights reserved. | IISER Bhopal | ULCOS Lab</p>
+            <p>&copy; 2025 Bhaskar De | IISER Bhopal | ULCOS Lab</p>
         </div>
     </footer>
 
