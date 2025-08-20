@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Smooth scrolling for anchor links
+// Smooth scrolling for anchor links (if any are added later)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -73,8 +73,72 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Mobile menu toggle (basic implementation)
+// Mobile menu toggle functionality (basic implementation)
 function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('mobile-active');
 }
+
+// Add click event listeners for better user experience
+document.addEventListener('DOMContentLoaded', function() {
+    // Add loading effect for buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+
+    // Add hover effects for cards
+    const cards = document.querySelectorAll('.highlight-card, .research-item, .publication-item, .presentation-item');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 15px 40px rgba(0,0,0,0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '';
+        });
+    });
+});
+
+// Preload critical resources
+window.addEventListener('load', function() {
+    // Preload profile image if it exists
+    const profileImg = document.querySelector('.profile-img');
+    if (profileImg && profileImg.src) {
+        const img = new Image();
+        img.src = profileImg.src;
+    }
+});
+
+// Add keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // Enable keyboard navigation for main navigation links
+    if (e.key === 'Tab') {
+        const focusedElement = document.activeElement;
+        if (focusedElement.classList.contains('nav-links')) {
+            focusedElement.style.outline = '2px solid #3498db';
+        }
+    }
+});
+
+// Print functionality for CV page
+if (window.location.pathname.includes('cv.html')) {
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === 'p') {
+            e.preventDefault();
+            window.print();
+        }
+    });
+}
+
+// Add performance monitoring
+window.addEventListener('load', function() {
+    // Log page load time for performance monitoring
+    const loadTime = performance.now();
+    console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+});
