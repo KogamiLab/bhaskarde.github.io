@@ -569,16 +569,24 @@ body {
     text-decoration: underline;
 }
 
-/* Footer - Hidden content */
+/* Footer */
 .footer {
-    background: #2c3e50;
-    padding: 1rem 0;
+    background: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 2rem 0;
     margin-top: auto;
+    border-top: 1px solid #e9ecef;
 }
 
 .footer p {
-    display: none;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
+
+
 
 /* Hide removed sections */
 .collaboration-note {
@@ -640,4 +648,53 @@ body {
         padding: 10px 16px;
         font-size: 0.9rem;
     }
+}
+
+/* Abstract content styling with smooth slide effect */
+.abstract-content {
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 0 1rem; /* No vertical padding initially */
+    font-size: 0.98rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    
+    /* Sliding animation properties */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.4s ease-out;
+}
+
+/* When abstract is shown */
+.abstract-content.show {
+    max-height: 500px; /* Adjust based on your longest abstract */
+    opacity: 1;
+    padding: 1rem; /* Full padding when expanded */
+}
+
+/* Abstract toggle button styling */
+.abstract-toggle-btn {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #3498db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.abstract-toggle-btn:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.abstract-toggle-btn:active {
+    transform: translateY(0);
 }

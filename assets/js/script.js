@@ -132,3 +132,17 @@ window.addEventListener('load', function() {
     const loadTime = performance.now();
     console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
 });
+
+function toggleAbstract(button) {
+    var abstract = button.closest('.publication-item').querySelector('.abstract-content');
+    
+    if (abstract.classList.contains('show')) {
+        // Hide abstract with slide up effect
+        abstract.classList.remove('show');
+        button.textContent = 'Abstract';
+    } else {
+        // Show abstract with slide down effect
+        abstract.classList.add('show');
+        button.textContent = 'Hide Abstract';
+    }
+}
