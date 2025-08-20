@@ -62,7 +62,7 @@ const observer = new IntersectionObserver(function(entries) {
 // Initialize animations
 document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll(
-        '.highlight-card, .research-item, .publication-item, .presentation-item, .teaching-item, .cv-section'
+        '.highlight-card, .research-item, .publication-item, .presentation-item, .teaching-item'
     );
     
     animateElements.forEach(el => {
@@ -125,16 +125,6 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
-
-// Print functionality for CV page
-if (window.location.pathname.includes('cv.html')) {
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && e.key === 'p') {
-            e.preventDefault();
-            window.print();
-        }
-    });
-}
 
 // Add performance monitoring
 window.addEventListener('load', function() {
