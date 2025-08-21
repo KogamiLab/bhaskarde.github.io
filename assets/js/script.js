@@ -136,13 +136,38 @@ window.addEventListener('load', function() {
 function toggleAbstract(button) {
     var abstract = button.closest('.publication-item').querySelector('.abstract-content');
     
+    // Different max heights for mobile vs desktop
+    var maxAllowedHeight = window.innerWidth <= 768 ? 200 : 600;
+    
     if (abstract.classList.contains('show')) {
-        // Hide abstract with slide up effect
-        abstract.classList.remove('show');
+        // Hide abstract
+        abstract.style.maxHeight = abstract.scrollHeight + 'px';
+        abstract.offsetHeight; // Force reflow
+        abstract.style.maxHeight = '0';
+        abstract.style.overflowY = 'hidden';
+        abstract.style.opacity = '0';
+        abstract.style.transform = 'translateY(-5px)';
+        
+        setTimeout(() => {
+            abstract.classList.remove('show');
+            abstract.style.overflowY = '';
+        }, 600);
+        
         button.textContent = 'Abstract';
     } else {
-        // Show abstract with slide down effect
+        // Show abstract
         abstract.classList.add('show');
+        abstract.style.maxHeight = '0';
+        abstract.style.opacity = '0';
+        abstract.style.transform = 'translateY(-5px)';
+        abstract.style.overflowY = 'hidden';
+        
+        abstract.offsetHeight; // Force reflow
+        abstract.style.maxHeight = maxAllowedHeight + 'px';
+        abstract.style.overflowY = 'auto';
+        abstract.style.opacity = '1';
+        abstract.style.transform = 'translateY(0)';
+        
         button.textContent = 'Hide Abstract';
     }
 }
