@@ -146,3 +146,22 @@ function toggleAbstract(button) {
         button.textContent = 'Hide Abstract';
     }
 }
+
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    navLinks.classList.toggle('mobile-active');
+    hamburger.classList.toggle('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('.nav-container');
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (!nav.contains(event.target) && navLinks.classList.contains('mobile-active')) {
+        navLinks.classList.remove('mobile-active');
+        hamburger.classList.remove('active');
+    }
+});
