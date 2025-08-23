@@ -803,3 +803,17 @@ body {
     max-height: 90vh;
   }
 }
+
+/* Make links inherit the text color */
+a {
+  color: inherit;           /* Use parent element's color */
+  text-decoration: none;    /* Remove underline (optional) */
+}
+
+a:visited {
+  color: inherit;           /* Keep same color after being clicked */
+}
+
+a:hover {
+  text-decoration: underline; /* Optional: show underline on hover for usability */
+}
